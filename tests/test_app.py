@@ -1,8 +1,15 @@
+import sys
+import os
 from src.app import adicionar_gasto, total_gastos
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 def test_adicionar_gasto():
     adicionar_gasto("teste", 10)
     assert total_gastos() == 10
+
 
 def test_valor_negativo():
     try:
@@ -10,6 +17,7 @@ def test_valor_negativo():
         assert False
     except ValueError:
         assert True
+
 
 def test_total():
     adicionar_gasto("a", 10)

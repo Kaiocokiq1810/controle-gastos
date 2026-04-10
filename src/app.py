@@ -1,15 +1,19 @@
 gastos = []
 
+
 def adicionar_gasto(nome, valor):
     if valor < 0:
         raise ValueError("Valor não pode ser negativo")
     gastos.append({"nome": nome, "valor": valor})
 
+
 def listar_gastos():
     return gastos
 
+
 def total_gastos():
     return sum(g["valor"] for g in gastos)
+
 
 def remover_gasto(nome):
     global gastos
