@@ -1,15 +1,19 @@
 gastos = []
 
+
 def adicionar_gasto(nome, valor):
     if valor < 0:
         raise ValueError("Valor não pode ser negativo")
     gastos.append({"nome": nome, "valor": valor})
 
+
 def listar_gastos():
     return gastos
 
+
 def total_gastos():
     return sum(g["valor"] for g in gastos)
+
 
 def remover_gasto(nome):
     global gastos
@@ -48,3 +52,17 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
+import requests
+
+
+def buscar_cotacao_dolar():
+    url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+
+    resposta = requests.get(url)
+
+    dados = resposta.json()
+
+    cotacao = dados["USDBRL"]["bid"]
+
+    return f"Cotação atual do dólar: R$ {cotacao}"

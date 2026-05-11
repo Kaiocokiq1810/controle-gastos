@@ -1,8 +1,15 @@
+import sys
+import os
 from src.app import adicionar_gasto, total_gastos
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 def test_adicionar_gasto():
     adicionar_gasto("teste", 10)
     assert total_gastos() == 10
+
 
 def test_valor_negativo():
     try:
@@ -11,7 +18,16 @@ def test_valor_negativo():
     except ValueError:
         assert True
 
+
 def test_total():
     adicionar_gasto("a", 10)
     adicionar_gasto("b", 20)
     assert total_gastos() >= 30
+
+from src.app import buscar_cotacao_dolar
+
+
+def test_buscar_cotacao_dolar():
+    resultado = buscar_cotacao_dolar()
+
+    assert "Cotação atual do dólar" in resultado
