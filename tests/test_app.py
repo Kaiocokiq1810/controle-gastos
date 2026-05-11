@@ -23,3 +23,11 @@ def test_total():
     adicionar_gasto("a", 10)
     adicionar_gasto("b", 20)
     assert total_gastos() >= 30
+
+from src.app import buscar_cotacao_dolar
+
+
+def test_buscar_cotacao_dolar():
+    resultado = buscar_cotacao_dolar()
+
+    assert "Cotação atual do dólar" in resultado

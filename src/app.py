@@ -52,3 +52,17 @@ def menu():
 
 if __name__ == "__main__":
     menu()
+
+import requests
+
+
+def buscar_cotacao_dolar():
+    url = "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+
+    resposta = requests.get(url)
+
+    dados = resposta.json()
+
+    cotacao = dados["USDBRL"]["bid"]
+
+    return f"Cotação atual do dólar: R$ {cotacao}"
