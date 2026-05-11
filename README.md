@@ -23,6 +23,24 @@ Pessoas que desejam organizar suas finanças de forma prática.
 - Pytest
 - Flake8
 - GitHub Actions
+# atualização
+
+* Integração com API pública de cotação do dólar.
+
+## API utilizada
+
+AwesomeAPI - Cotação de moedas em tempo real.
+
+## Como executar
+
+```bash
+pip install -r requirements.txt
+pytest
+```
+
+## Branch da entrega intermediária
+
+entrega-intermediaria
 
 ##  Como executar
 
