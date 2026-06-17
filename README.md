@@ -66,7 +66,7 @@ O projeto utiliza:
 * Testes automatizados com Pytest
 * Análise de código com Flake8
 
-## Branch da Entrega Intermediária
+## Branch da Entrega final
 
 ```text
 entrega-intermediaria
@@ -76,9 +76,11 @@ entrega-intermediaria
 
 https://github.com/kaiocokiq1810/controle-gastos
 
-## Autor
+## Autores
 
 Kaique Duarte Guilherme
+Vinicius nogueira 
+isac freitas
 
 ## Matrícula 
 22506725
